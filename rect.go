@@ -34,6 +34,10 @@ func (r Rect) Size() (w, h float64) {
 	return r.Max.X - r.Min.X, r.Max.Y - r.Min.Y
 }
 
+func (r Rect) Area() float64 {
+	return (r.Max.X - r.Min.X) * (r.Max.Y - r.Min.Y)
+}
+
 func (r Rect) Center() (center Coord) {
 	center.X = 0.5 * (r.Min.X + r.Max.X)
 	center.Y = 0.5 * (r.Min.Y + r.Max.Y)
